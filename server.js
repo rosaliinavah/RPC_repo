@@ -14,7 +14,7 @@ app.listen(PORT, () => {
 });
 
 // Connect to MongoDB Atlas
-mongoose.connect("mongodb+srv://rvahapesola_db:kayttajasalasana1@testcluster.yps41pp.mongodb.net/plcdata?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://kayttajanimi:salasana@testcluster.yps41pp.mongodb.net/plcdata?retryWrites=true&w=majority")
   .then(() => console.log("MongoDB connected"))
   .catch(err => console.error("MongoDB error:", err));
 
