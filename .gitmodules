@@ -1,0 +1,3 @@
+[submodule "ext/ATE"]
+	path = ext/ATE
+	url = https://epectfssrv.ad.epec.fi/tfs/Epec%20Products/EnvironmentalTestingSystem/_git/ATE

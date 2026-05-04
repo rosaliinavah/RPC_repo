@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mtsConfiguration version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="multitool_export.xsd">
+  <meta>
+    <name>CodesysRPC</name>
+    <multiTool>
+      <version>8.6.9547.24640</version>
+      <systemVersion>1.0.6</systemVersion>
+    </multiTool>
+    <exportDate>2026-03-19T14:01:24.7121689+02:00</exportDate>
+  </meta>
+  <modules>
+    <vcu name="RAU">
+      <icon name="6200.png" locX="596" locY="259" />
+      <info>
+        <param name="unittype">6200</param>
+        <param name="functionalversion">6200-268</param>
+        <param name="serial">2122008357</param>
+        <param name="targetid">10C8 8002</param>
+        <param name="macaddress">93:8D:7E:9D:A6:29</param>
+        <param name="ipconfiguration">127.0.0.1</param>
+        <param name="platform">6000Series_x86</param>
+        <param name="rtsignature">37634D70</param>
+        <param name="vendorid">48</param>
+        <param name="productcode">6200</param>
+        <param name="revisionnumber">0001</param>
+        <param name="hardwareversion">0001</param>
+        <param name="nvRam">0,8192,1250000,NvRam0.bin</param>
+        <param name="safetydevice" type="int">0</param>
+        <param name="diagnosticchannel">fwdiagnosticchannel</param>
+        <param name="runtimeversion">3.5.19.60</param>
+      </info>
+      <packageVersions>
+        <vcu>*</vcu>
+        <codesys>3.5_x86_sp19_60</codesys>
+        <platform>1.2</platform>
+        <hardware>-</hardware>
+      </packageVersions>
+      <commParameters>
+        <canPorts>
+          <can port="0">
+            <nodeID>1</nodeID>
+            <bitrate>250</bitrate>
+            <network>NETWORK1</network>
+            <icon locX="-10" locY="40" />
+          </can>
+          <can port="1">
+            <nodeID>1</nodeID>
+            <bitrate>250</bitrate>
+            <network />
+            <icon locX="40" locY="-10" />
+          </can>
+          <can port="2">
+            <nodeID>1</nodeID>
+            <bitrate>250</bitrate>
+            <network />
+            <icon locX="90" locY="40" />
+          </can>
+          <can port="3">
+            <nodeID>1</nodeID>
+            <bitrate>250</bitrate>
+            <network />
+            <icon locX="40" locY="90" />
+          </can>
+          <can port="4">
+            <nodeID>1</nodeID>
+            <bitrate>250</bitrate>
+            <network />
+            <icon locX="-10" locY="-10" />
+          </can>
+          <can port="5">
+            <nodeID>1</nodeID>
+            <bitrate>250</bitrate>
+            <network />
+            <icon locX="90" locY="-10" />
+          </can>
+        </canPorts>
+      </commParameters>
+      <simulation>
+        <inputs>
+          <data chnNbr="0" name="fwdiagnosticchannel" defaultValue="2" unit="">
+            <description>Diagnostic channel for GetDiagnosticStatus function from Firmware</description>
+          </data>
+          <data chnNbr="1" name="DEV_DSC_SUPPLY_Volt" defaultValue="24.0" unit="V" parameterid="1016">
+            <scaling internalMax="1023" internalMin="0" valueAtInternalMax="65.0" valueAtInternalMin="0.0" />
+            <description>Supply voltage simulation channel</description>
+          </data>
+          <data chnNbr="2" name="DEV_DSC_TEMP_PCB" defaultValue="475" unit="C" parameterid="1017">
+            <scaling internalMax="1023" internalMin="0" valueAtInternalMax="1023" valueAtInternalMin="0" />
+            <description>PCB temperature channel</description>
+          </data>
+          <data chnNbr="3" name="DEV_DSC_TEMP_CPU" defaultValue="22.0" unit="C" parameterid="1018">
+            <scaling internalMax="125" internalMin="-40" valueAtInternalMax="125.0" valueAtInternalMin="-40.0" />
+            <description>CPU temperature channel</description>
+          </data>
+          <data chnNbr="4" name="DEV_DSC_REF_5V" defaultValue="5.0" unit="C" parameterid="1004">
+            <scaling internalMax="1023" internalMin="0" valueAtInternalMax="10.23" valueAtInternalMin="0.0" />
+            <description>5V REF channel</description>
+          </data>
+        </inputs>
+        <outputs />
+      </simulation>
+    </vcu>
+    <vcu name="Display">
+      <icon name="6107.png" locX="213" locY="256" />
+      <info>
+        <param name="unittype">6807</param>
+        <param name="functionalversion">6807-220</param>
+        <param name="serial">2141825277</param>
+        <param name="targetid">10C8 8002</param>
+        <param name="macaddress">F9:3E:16:0B:A5:4B</param>
+        <param name="ipconfiguration">127.0.0.1</param>
+        <param name="platform">6000Series_x86</param>
+        <param name="rtsignature">37634D70</param>
+        <param name="vendorid">48</param>
+        <param name="productcode">6807</param>
+        <param name="revisionnumber">0001</param>
+        <param name="hardwareversion">0001</param>
+        <param name="nvRam">0,8192,1250000,NvRam0.bin</param>
+        <param name="safetydevice" type="int">0</param>
+        <param name="diagnosticchannel">fwdiagnosticchannel</param>
+        <param name="runtimeversion">3.5.19.60</param>
+      </info>
+      <packageVersions>
+        <vcu>*</vcu>
+        <codesys>3.5_x86_sp19_60</codesys>
+        <platform>1.2</platform>
+        <hardware>-</hardware>
+      </packageVersions>
+      <commParameters>
+        <canPorts>
+          <can port="0">
+            <nodeID>2</nodeID>
+            <bitrate>250</bitrate>
+            <network>NETWORK1</network>
+            <icon locX="90" locY="47" />
+          </can>
+          <can port="1">
+            <nodeID>2</nodeID>
+            <bitrate>250</bitrate>
+            <network />
+            <icon locX="40" locY="-10" />
+          </can>
+        </canPorts>
+      </commParameters>
+      <simulation>
+        <inputs>
+          <data chnNbr="0" name="fwdiagnosticchannel" defaultValue="2" unit="">
+            <description>Diagnostic channel for GetDiagnosticStatus function from Firmware</description>
+          </data>
+          <data chnNbr="1" name="DEV_DSC_SUPPLY_Volt" defaultValue="24.0" unit="V" parameterid="1016">
+            <scaling internalMax="1023" internalMin="0" valueAtInternalMax="65.0" valueAtInternalMin="0.0" />
+            <description>Supply voltage simulation channel</description>
+          </data>
+          <data chnNbr="2" name="DEV_DSC_TEMP_PCB" defaultValue="475" unit="C" parameterid="1017">
+            <scaling internalMax="1023" internalMin="0" valueAtInternalMax="1023" valueAtInternalMin="0" />
+            <description>PCB temperature channel</description>
+          </data>
+          <data chnNbr="3" name="DEV_DSC_TEMP_CPU" defaultValue="22.0" unit="C" parameterid="1018">
+            <scaling internalMax="125" internalMin="-40" valueAtInternalMax="125.0" valueAtInternalMin="-40.0" />
+            <description>CPU temperature channel</description>
+          </data>
+          <data chnNbr="4" name="DEV_DSC_REF_5V" defaultValue="5.0" unit="C" parameterid="1004">
+            <scaling internalMax="1023" internalMin="0" valueAtInternalMax="10.23" valueAtInternalMin="0.0" />
+            <description>5V REF channel</description>
+          </data>
+          <data chnNbr="5" name="AI_X1_5" unit="" parameterid="994">
+            <scaling internalMax="1023" internalMin="0" valueAtInternalMax="1023" valueAtInternalMin="0" />
+            <description>Pin {0}.{1} - Value in CODESYS V3 device description file.</description>
+          </data>
+          <data chnNbr="6" name="AI_X1_17" unit="" parameterid="1006">
+            <scaling internalMax="1023" internalMin="0" valueAtInternalMax="1023" valueAtInternalMin="0" />
+            <description>Pin {0}.{1} - Value in CODESYS V3 device description file.</description>
+          </data>
+        </inputs>
+        <outputs />
+      </simulation>
+    </vcu>
+    <vcu name="EPEC_CU1">
+      <icon name="icon_core.png" locX="76" locY="514" />
+      <info>
+        <param name="unittype">CORE1</param>
+        <param name="functionalversion">CORE1-01-B</param>
+        <param name="serial">2126205640</param>
+        <param name="targetid">10C8 8040</param>
+        <param name="macaddress">86:34:3E:54:43:00</param>
+        <param name="ipconfiguration">127.0.0.1</param>
+        <param name="platform">Core_x64</param>
+        <param name="rtsignature">CECFCA9E</param>
+        <param name="targetdevicemask">8FFF</param>
+        <param name="vendorid">48</param>
+        <param name="productcode">9021</param>
+        <param name="revisionnumber">0001</param>
+        <param name="hardwareversion">0001</param>
+        <param name="nvRam">0,524288,1250000,NvRam0.bin</param>
+        <param name="safetydevice" type="int">0</param>
+        <param name="runtimeversion">3.5.19.0</param>
+      </info>
+      <packageVersions>
+        <vcu>*</vcu>
+        <codesys>3.5_x64_sp19</codesys>
+        <platform>1.2</platform>
+        <hardware>-</hardware>
+      </packageVersions>
+      <commParameters>
+        <canPorts>
+          <can port="0">
+            <nodeID>3</nodeID>
+            <bitrate>250</bitrate>
+            <network>NETWORK2</network>
+            <icon locX="-10" locY="59" />
+          </can>
+        </canPorts>
+      </commParameters>
+      <simulation>
+        <inputs />
+        <outputs />
+      </simulation>
+    </vcu>
+    <vcu name="EPEC_CU2">
+      <icon name="icon_core.png" locX="719" locY="492" />
+      <info>
+        <param name="unittype">CORE1_MCU</param>
+        <param name="functionalversion">CORE1_01_B_MCU</param>
+        <param name="serial">3344138871</param>
+        <param name="targetid">10C8 802C</param>
+        <param name="macaddress">86:34:3E:54:43:00</param>
+        <param name="ipconfiguration">127.0.0.1</param>
+        <param name="platform">E_S_Series_x86</param>
+        <param name="rtsignature">37634D70</param>
+        <param name="vendorid">48</param>
+        <param name="productcode">9023</param>
+        <param name="revisionnumber">0001</param>
+        <param name="hardwareversion">0001</param>
+        <param name="nvRam">0,32768,1250000,NvRam0.bin</param>
+        <param name="safetydevice" type="int">1</param>
+        <param name="diagnosticchannel">fwdiagnosticchannel</param>
+        <param name="operatingvoltages">AI_VIN_V_Diagnostic</param>
+        <param name="powerswitches">AI_VOUT_SAFE_Diagnostic</param>
+        <param name="runtimeversion">3.5.19.0</param>
+      </info>
+      <packageVersions>
+        <vcu>*</vcu>
+        <codesys>3.5_x86_sp19</codesys>
+        <platform>1.2</platform>
+        <hardware>-</hardware>
+      </packageVersions>
+      <commParameters>
+        <canPorts>
+          <can port="0">
+            <nodeID>4</nodeID>
+            <bitrate>250</bitrate>
+            <network />
+            <icon locX="-10" locY="40" />
+          </can>
+          <can port="1">
+            <nodeID>4</nodeID>
+            <bitrate>250</bitrate>
+            <network />
+            <icon locX="40" locY="-10" />
+          </can>
+          <can port="2">
+            <nodeID>4</nodeID>
+            <bitrate>250</bitrate>
+            <network />
+            <icon locX="90" locY="40" />
+          </can>
+          <can port="3">
+            <nodeID>4</nodeID>
+            <bitrate>250</bitrate>
+            <network />
+            <icon locX="40" locY="90" />
+          </can>
+          <can port="4">
+            <nodeID>4</nodeID>
+            <bitrate>250</bitrate>
+            <network />
+            <icon locX="-10" locY="-10" />
+          </can>
+          <can port="5">
+            <nodeID>4</nodeID>
+            <bitrate>250</bitrate>
+            <network />
+            <icon locX="90" locY="-10" />
+          </can>
+        </canPorts>
+      </commParameters>
+      <simulation>
+        <inputs>
+          <data chnNbr="0" name="fwdiagnosticchannel" defaultValue="2" unit="">
+            <description>Diagnostic channel for GetDiagnosticStatus function from Firmware</description>
+          </data>
+          <data chnNbr="1" name="AI_VOUT_SAFE_Diagnostic.Error" defaultValue="0" unit="">
+            <description>Error simulation state for power switch output voltage (0 = no error, 1 = error)</description>
+          </data>
+          <data chnNbr="2" name="AI_VIN_V_Diagnostic" defaultValue="24" unit="V" parameterid="204290">
+            <scaling internalMax="4095" internalMin="0" valueAtInternalMax="49.3" valueAtInternalMin="0.0" />
+            <description>Internal diagnostic variable mapped to FW io interface</description>
+          </data>
+          <data chnNbr="3" name="AI_PCB_1_V_Diagnostic" defaultValue="22" unit="C" parameterid="202754">
+            <scaling internalMax="1713" internalMin="0" valueAtInternalMax="150" valueAtInternalMin="-50.0" />
+            <description>Internal diagnostic variable mapped to FW io interface</description>
+          </data>
+          <data chnNbr="4" name="AI_PCB_2_V_Diagnostic" defaultValue="22" unit="C" parameterid="203010">
+            <scaling internalMax="1713" internalMin="0" valueAtInternalMax="150" valueAtInternalMin="-50.0" />
+            <description>Internal diagnostic variable mapped to FW io interface</description>
+          </data>
+          <data chnNbr="5" name="AI_MCU_C_Diagnostic" defaultValue="22.0" unit="C" parameterid="203275">
+            <scaling internalMax="1500" internalMin="-450" valueAtInternalMax="150.0" valueAtInternalMin="-45.0" />
+            <description>Internal diagnostic variable mapped to FW io interface</description>
+          </data>
+          <data chnNbr="6" name="AI_SBC_C_Diagnostic" defaultValue="22.0" unit="C" parameterid="203531">
+            <scaling internalMax="1500" internalMin="-450" valueAtInternalMax="150.0" valueAtInternalMin="-45.0" />
+            <description>Internal diagnostic variable mapped to FW io interface</description>
+          </data>
+          <data chnNbr="7" name="AI_VOUT_SAFE_Diagnostic" defaultValue="0" unit="V" parameterid="203778" feedback="AI_VOUT_SAFE_Diagnostic.Feedback" error="AI_VOUT_SAFE_Diagnostic.Error">
+            <scaling internalMax="4095" internalMin="0" valueAtInternalMax="49.3" valueAtInternalMin="0.0" />
+            <description>Internal diagnostic variable mapped to FW io interface</description>
+          </data>
+          <data chnNbr="8" name="AI_VOUT_NON_SAFE_Diagnostic" defaultValue="24" unit="V" parameterid="204034">
+            <scaling internalMax="4095" internalMin="0" valueAtInternalMax="49.3" valueAtInternalMin="0.0" />
+            <description>Internal diagnostic variable mapped to FW io interface</description>
+          </data>
+        </inputs>
+        <outputs>
+          <data chnNbr="9" name="AI_VOUT_SAFE_Diagnostic.Feedback" defaultValue="0" unit="V">
+            <scaling internalMax="4095" internalMin="0" valueAtInternalMax="49.3" valueAtInternalMin="0.0" />
+            <description>Measurement for power switch output voltage that is visible to CODESYS application</description>
+          </data>
+        </outputs>
+      </simulation>
+    </vcu>
+    <vcu name="EPEC_CU3">
+      <icon name="icon_core.png" locX="261" locY="509" />
+      <info>
+        <param name="unittype">CORE1</param>
+        <param name="functionalversion">CORE1-01-B</param>
+        <param name="serial">3486102621</param>
+        <param name="targetid">10C8 8040</param>
+        <param name="macaddress">86:34:3E:54:43:00</param>
+        <param name="ipconfiguration">127.0.0.1</param>
+        <param name="platform">Core_x64</param>
+        <param name="rtsignature">CECFCA9E</param>
+        <param name="targetdevicemask">8FFF</param>
+        <param name="vendorid">48</param>
+        <param name="productcode">9021</param>
+        <param name="revisionnumber">0001</param>
+        <param name="hardwareversion">0001</param>
+        <param name="nvRam">0,524288,1250000,NvRam0.bin</param>
+        <param name="safetydevice" type="int">0</param>
+        <param name="runtimeversion">3.5.19.0</param>
+      </info>
+      <packageVersions>
+        <vcu>*</vcu>
+        <codesys>3.5_x64_sp19</codesys>
+        <platform>1.2</platform>
+        <hardware>-</hardware>
+      </packageVersions>
+      <commParameters>
+        <canPorts>
+          <can port="0">
+            <nodeID>5</nodeID>
+            <bitrate>250</bitrate>
+            <network>NETWORK2</network>
+            <icon locX="-10" locY="59" />
+          </can>
+        </canPorts>
+      </commParameters>
+      <simulation>
+        <inputs />
+        <outputs />
+      </simulation>
+    </vcu>
+  </modules>
+  <networks>
+    <can name="NETWORK1">
+      <icon name="network.png" locX="423" locY="270" color="#33CCFF" />
+    </can>
+    <can name="NETWORK2">
+      <icon name="network.png" locX="191" locY="653" color="#007CC2" />
+    </can>
+  </networks>
+  <binaryData path="images" />
+</mtsConfiguration>

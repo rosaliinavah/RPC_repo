@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="System definition.xsd">
+	<MD5Checksum />
+	<Version Major="2020" Minor="0" Fix="0" Build="0" />
+	<Content>Definition</Content>
+	<Root Name="Engine Demo" TypeGUID="d9313aae-3554-45e5-93f3-86454275d4f2" Identifier="784f2959-04c2-4087-9d83-0f73ccc6b9ee">
+		<Description />
+		<Properties>
+			<Property Name="Name">
+				<String>Engine Demo</String>
+			</Property>
+			<Property Name="Version">
+				<String>1.0.0.0</String>
+			</Property>
+			<Property Name="Creator">
+				<String />
+			</Property>
+			<Property Name="Creation Date">
+				<Double>3391655268.4868159</Double>
+			</Property>
+		</Properties>
+		<Errors />
+		<Section Name="System Definition File" TypeGUID="b9227a5b-2770-4a62-8621-ac414d4124fb" Identifier="01328c3f-1357-4fbb-9966-507ce2fcad8d">
+			<Description />
+			<Properties />
+			<Errors />
+			<Section Name="Engine Demo.nivssdf" TypeGUID="3a41ca74-36ec-4aff-9219-9d05c8f91208" Identifier="3c02bc80-98af-4dcf-8138-d111ee4f5bd5">
+				<Description />
+				<Properties>
+					<Property Name="Path">
+						<DependentFile Type="Relative" Path="Engine Demo.nivssdf">
+							<Version />
+							<RTDestination />
+							<SupportedTarget />
+							<MD5>07f29fdbe9ddfe2b2f7c9292e8095552</MD5>
+						</DependentFile>
+					</Property>
+				</Properties>
+				<Errors />
+			</Section>
+		</Section>
+		<Section Name="User Interface" TypeGUID="bc98486f-7b49-4949-9504-949cbe254c85" Identifier="5ca17a73-fc3c-4dff-b668-8b360dcbbaae">
+			<Description />
+			<Properties>
+				<Property Name="User Accounts">
+					<Variant>
+						<Type>AAAACgAUQDD/////C2RhdGEgc3RyaW5n</Type>
+						<Data>AAAAzxAAgAAAAAAFAA5AMP////8ETmFtZQAAEkAw/////whQYXNzd29yZAAADkAw/////wVHcm91cABMAPEAAAAAAAAAAhhTZWMgQWRtaW5pc3RyYXRpb24ubHZsaWIMVXNlclR5cGUuY3RsAB5AUAADAAAAAQACDFVzZXIgQWNjb3VudAAAGkBAAAH/////AAMNVXNlciBBY2NvdW50cwABAAQAAAABAAAADUFkbWluaXN0cmF0b3IAAAAAAAAADkFkbWluaXN0cmF0aW9uAAAAAA==</Data>
+					</Variant>
+				</Property>
+				<Property Name="Group Accounts">
+					<Variant>
+						<Type>AAAACgAUQDD/////C2RhdGEgc3RyaW5n</Type>
+						<Data>AAAA7RAAgAAAAAAFAA5AMP////8ETmFtZQAADEAhB0Jvb2xlYW4AGEBAAAH/////AAELUGVybWlzc2lvbnMASwDxAAAAAAAAAAIYU2VjIEFkbWluaXN0cmF0aW9uLmx2bGliDUdyb3VwVHlwZS5jdGwAHEBQAAIAAAACDUdyb3VwIEFjY291bnQAHEBAAAH/////AAMOR3JvdXAgQWNjb3VudHMAAAEABAAAAAIAAAAOQWRtaW5pc3RyYXRpb24AAAANAQEBAQEBAQEBAQEBAQAAAAhPcGVyYXRvcgAAAA0BAAAAAQABAQAAAAAAAAAAAA==</Data>
+					</Variant>
+				</Property>
+				<Property Name="Tools Menu Items">
+					<Variant>
+						<Type>AAAACgAUQDD/////C2RhdGEgc3RyaW5n</Type>
+						<Data>AAAGWyEAgAAAAAAIAA5AMP////8ETmFtZQAAEkAw/////whGdW5jdGlvbgAAYQDxAAAAAAAAAAETVG9vbGJhciBCdXR0b25zLmN0bABFQBYAAwROb25lF1N0aW11bHVzIFByb2ZpbGUgRWRpdG9yC0RhdGEgVmlld2VyAAAOVG9vbGJhciBCdXR0b24AAVMA8QAAAAAAAAABH2VudW1fVXNlciBBZG1pbiBQZXJtaXNzaW9ucy5jdGwBK0AWAA0HRGVmYXVsdA5BZG1pbmlzdHJhdGlvbhdDaGFubmVsIFNjYWxpbmcgVXRpbGl0eRFBZGQgRGlzcGxheSBJdGVtcxNDaGFuZ2UgVXNlciBQcm9maWxlI0VkaXQgU3RpbXVsdXMgUHJvZmlsZSBFZGl0b3IgSGVhZGVyGkVkaXQgRGlzcGxheSBJdGVtIFNldHRpbmdzG01vZGVsIFBhcmFtZXRlciBDYWxpYnJhdGlvbhJSdW50aW1lIEFsYXJtIEVkaXQPRWRpdCBUb29scyBNZW51FkVkaXQgRW5naW5lIENvbXBvbmVudHMaQ29uZmlndXJlIFZpc2libGUgQ2hhbm5lbHMNRmF1bHQgTWFuYWdlcgAAClBlcm1pc3Npb24AABpAMv////8QQ3VzdG9tIFRvb2wgUGF0aAAAdwDxx+1IGQAAAAIRTklWU19TaGFyZWQubHZsaWINUGF0aCB0eXBlLmN0bABPQBYABAhBYnNvbHV0ZQhSZWxhdGl2ZQ5Ub0NvbW1vbkRvY0RpcgxUb0FwcERhdGFEaXIAFUN1c3RvbSBUb29sIFBhdGggVHlwZQBjAPEAAAAAAAAAAhpOSVZTUHJval9GaWxlbWFuYWdlci5sdmxpYhlUb29scyBNZW51IEl0ZW1zIFR5cGUuY3RsACZAUAAGAAAAAQACAAMABAAFD1Rvb2xzIE1lbnUgSXRlbQAeQEAAAf////8ABhBUb29scyBNZW51IEl0ZW1zAAABAAcAAAAPAAAADUFsYXJtIE1vbml0b3IAAAAUc3ViX0FsYXJtIE1vbml0b3IudmkAAAAIUFRIMAAAAAQAAAAAAAAAAAAXTW9kZWwgUGFyYW1ldGVyIE1hbmFnZXIAAAAaTW9kZWwgUGFyYW1ldGVyIE1hbmFnZXIudmkAAAAHUFRIMAAAAAQAAAAAAAAAAAABLQAAAAEtAAAAAVBUSDAAAAAEAAAAAAAAAAAAF1N0aW11bHVzIFByb2ZpbGUgRWRpdG9yAAAAHlN0aW11bHVzIFByb2ZpbGUgRWRpdG9yIERpYWxvZwABAAFQVEgwAAAABAAAAAAAAAAAAAEtAAAAAS0AAAABUFRIMAAAAAQAAAAAAAAAAAATQ2hhbm5lbCBDYWxpYnJhdGlvbgAAABJDYWxpYnJhdGlvblRvb2wudmkAAAACUFRIMAAAAAQAAAAAAAAAAAAVQ2hhbm5lbCBGYXVsdCBNYW5hZ2VyAAAAFHNjcl9GYXVsdCBNYW5hZ2VyLnZpAAAADFBUSDAAAAAEAAAAAAAAAAAAAS0AAAABLQAAAAFQVEgwAAAABAAAAAAAAAAAAA5NYWNybyBSZWNvcmRlcgAAADBXb3Jrc3BhY2UgTWFjcm9cUmVjb3JkZXJQbGF5ZXJcTWFjcm8gUmVjb3JkZXIudmkAAAABUFRIMAAAAAQAAAAAAAAAAAAMTWFjcm8gUGxheWVyAAAALldvcmtzcGFjZSBNYWNyb1xSZWNvcmRlclBsYXllclxNYWNybyBQbGF5ZXIudmkAAAAAUFRIMAAAAAQAAAAAAAAAAAABLQAAAAEtAAAAAVBUSDAAAAAEAAAAAAAAAAAAEFhORVQgQnVzIE1vbml0b3IAAAAkWE5FVCBCdXMgTW9uaXRvclxYTkVUIEJ1cyBNb25pdG9yLnZpAAAAAVBUSDAAAAAEAAAAAAAAAAAAAS0AAAABLQAAAAFQVEgwAAAABAAAAAAAAAAAABNDaGFubmVsIERhdGEgVmlld2VyAAAAFkNoYW5uZWwgRGF0YSBWaWV3ZXIudmkAAAAAUFRIMAAAAAQAAAAAAAAAAAAQVERNUyBGaWxlIFZpZXdlcgAAABdzY3JfVERNUyBEYXRhIFZpZXdlci52aQACAABQVEgwAAAABAAAAAAAAAAAAAA=</Data>
+					</Variant>
+				</Property>
+			</Properties>
+			<Errors />
+			<Section Name="Engine Demo.nivsscreen" TypeGUID="cdfadfe0-c84a-4268-a677-4f2f3525465e" Identifier="a48bbd1f-398a-480e-9a6f-6045d3a000a2">
+				<Description />
+				<Properties>
+					<Property Name="Path">
+						<DependentFile Type="Relative" Path="Engine Demo.nivsscreen">
+							<Version />
+							<RTDestination />
+							<SupportedTarget />
+							<MD5>d57a68ddfb78b54537cb7b1992eab378</MD5>
+						</DependentFile>
+					</Property>
+				</Properties>
+				<Errors />
+			</Section>
+			<Section Name="Engine Demo.nivsprj" TypeGUID="53735ba2-ebbf-4751-b2f2-531478d45887" Identifier="cbed8f32-0a67-422c-b2d8-97f57aead379">
+				<Description />
+				<Properties>
+					<Property Name="Path">
+						<DependentFile Type="Relative" Path="Engine Demo.nivsprj">
+							<Version />
+							<RTDestination />
+							<SupportedTarget />
+							<MD5>729225b92fe83a04389f7a7066fb7cd6</MD5>
+						</DependentFile>
+					</Property>
+				</Properties>
+				<Errors />
+			</Section>
+		</Section>
+		<Section Name="Services" TypeGUID="736a951c-d9c8-457f-96a9-cd0ef16011a5" Identifier="949b2e04-b52c-4def-a17c-3c1eaeebe641">
+			<Description />
+			<Properties />
+			<Errors />
+			<Section Name="Model Parameter Manager" TypeGUID="cc686646-9933-410d-a553-6308e6e06897" Identifier="bf2415c3-cfc9-4551-b791-317348c97b7a">
+				<Description />
+				<Properties>
+					<Property Name="Function">
+						<String>Model Parameter Manager.vi</String>
+					</Property>
+					<Property Name="Path">
+						<DependentFile Type="Absolute" Path="">
+							<Version />
+							<RTDestination />
+							<SupportedTarget />
+							<MD5 />
+						</DependentFile>
+					</Property>
+					<Property Name="Sync Options">
+						<String>WaitSync</String>
+					</Property>
+					<Property Name="Sync Timeout">
+						<I32>10000</I32>
+					</Property>
+				</Properties>
+				<Errors />
+			</Section>
+		</Section>
+		<Section Name="Profiles" TypeGUID="c3bd79ec-3336-4b06-868e-3217c640edd5" Identifier="b5dfa89e-eb8c-481c-a05a-d39c07de1d1f">
+			<Description />
+			<Properties />
+			<Errors />
+			<Section Name="Basic Engine Demo" TypeGUID="c23d9309-697b-4ae0-827b-ceafb29f7389" Identifier="e5e18670-dbf0-4967-ab32-26366986c0dc">
+				<Description />
+				<Properties />
+				<Errors />
+				<Section Name="Engine Demo Basic.nivsseq" TypeGUID="60c70402-70f4-4143-a25d-dccc4748d28d" Identifier="921bbdc7-206c-41b9-958d-33fcde2c0e47">
+					<Description />
+					<Properties>
+						<Property Name="Path">
+							<DependentFile Type="Relative" Path="Stimulus Profiles\Basic Engine Demo\Engine Demo Basic.nivsseq">
+								<Version />
+								<RTDestination />
+								<SupportedTarget />
+								<MD5>f3ec1645760c7943c0538a984d23448b</MD5>
+							</DependentFile>
+						</Property>
+					</Properties>
+					<Errors />
+				</Section>
+				<Section Name="Engine Demo Basics.nivsstimprof" TypeGUID="fae2716e-e749-41ef-9f01-4a9046a000ef" Identifier="e27c4911-f243-46b4-b9e0-7142514567c7">
+					<Description />
+					<Properties>
+						<Property Name="Path">
+							<DependentFile Type="Relative" Path="Stimulus Profiles\Basic Engine Demo\Engine Demo Basics.nivsstimprof">
+								<Version />
+								<RTDestination />
+								<SupportedTarget />
+								<MD5>e1db92e58c17abe24a539fa1ed0514bc</MD5>
+							</DependentFile>
+						</Property>
+					</Properties>
+					<Errors />
+				</Section>
+			</Section>
+			<Section Name="Engine Demo Advanced" TypeGUID="c23d9309-697b-4ae0-827b-ceafb29f7389" Identifier="f4d1c9bc-153c-4628-9dac-b9be1a6cb7d3">
+				<Description />
+				<Properties />
+				<Errors />
+				<Section Name="Engine Demo Advanced.nivsseq" TypeGUID="60c70402-70f4-4143-a25d-dccc4748d28d" Identifier="f5e6d41e-0c56-47cf-ac91-4d0e7c95d1ea">
+					<Description />
+					<Properties>
+						<Property Name="Path">
+							<DependentFile Type="Relative" Path="Stimulus Profiles\Engine Demo Advanced\Engine Demo Advanced.nivsseq">
+								<Version />
+								<RTDestination />
+								<SupportedTarget />
+								<MD5>2e20d1926ef079da1ee774a8756c01b1</MD5>
+							</DependentFile>
+						</Property>
+					</Properties>
+					<Errors />
+				</Section>
+				<Section Name="Engine Demo Advanced.nivsstimprof" TypeGUID="fae2716e-e749-41ef-9f01-4a9046a000ef" Identifier="18b5e54d-c544-4b97-a28c-46083b357667">
+					<Description />
+					<Properties>
+						<Property Name="Path">
+							<DependentFile Type="Relative" Path="Stimulus Profiles\Engine Demo Advanced\Engine Demo Advanced.nivsstimprof">
+								<Version />
+								<RTDestination />
+								<SupportedTarget />
+								<MD5>d05fb38ceb4207201f679323f9a0a75b</MD5>
+							</DependentFile>
+						</Property>
+					</Properties>
+					<Errors />
+				</Section>
+			</Section>
+			<Section Name="Engine Demo Return Value" TypeGUID="c23d9309-697b-4ae0-827b-ceafb29f7389" Identifier="d9e63bc7-c3ab-4e5e-b332-aa5d508f7c53">
+				<Description />
+				<Properties />
+				<Errors />
+				<Section Name="Engine Demo Return Value.nivsseq" TypeGUID="60c70402-70f4-4143-a25d-dccc4748d28d" Identifier="a1ba0a4d-a987-4c92-aa12-7c8a01e16958">
+					<Description />
+					<Properties>
+						<Property Name="Path">
+							<DependentFile Type="Relative" Path="Stimulus Profiles\Engine Demo Return Value\Engine Demo Return Value.nivsseq">
+								<Version />
+								<RTDestination />
+								<SupportedTarget />
+								<MD5>f6a1232391a76d19db625ff529f1d0ed</MD5>
+							</DependentFile>
+						</Property>
+					</Properties>
+					<Errors />
+				</Section>
+				<Section Name="Engine Demo Return Value.nivsstimprof" TypeGUID="fae2716e-e749-41ef-9f01-4a9046a000ef" Identifier="91716f73-f794-4d4d-9555-efec7e1c3c4e">
+					<Description />
+					<Properties>
+						<Property Name="Path">
+							<DependentFile Type="Relative" Path="Stimulus Profiles\Engine Demo Return Value\Engine Demo Return Value.nivsstimprof">
+								<Version />
+								<RTDestination />
+								<SupportedTarget />
+								<MD5>4474dc9e5b8639fe220af5c6c1bb9a2a</MD5>
+							</DependentFile>
+						</Property>
+					</Properties>
+					<Errors />
+				</Section>
+			</Section>
+			<Section Name="Engine Demo Update Model Parameters" TypeGUID="c23d9309-697b-4ae0-827b-ceafb29f7389" Identifier="6bf7c266-d14b-4ba9-b416-86f40d3cb42f">
+				<Description />
+				<Properties />
+				<Errors />
+				<Section Name="Engine Demo Update Model Parameters.nivsstimprof" TypeGUID="fae2716e-e749-41ef-9f01-4a9046a000ef" Identifier="d34d85b2-6abf-40c6-bfe8-2db071246711">
+					<Description />
+					<Properties>
+						<Property Name="Path">
+							<DependentFile Type="Relative" Path="Stimulus Profiles\Update Model Parameters\Engine Demo Update Model Parameters.nivsstimprof">
+								<Version />
+								<RTDestination />
+								<SupportedTarget />
+								<MD5>f9d17365d8bf15b3f900554ee481e53a</MD5>
+							</DependentFile>
+						</Property>
+					</Properties>
+					<Errors />
+				</Section>
+			</Section>
+			<Section Name="Engine Demo Macro Player" TypeGUID="c23d9309-697b-4ae0-827b-ceafb29f7389" Identifier="97eabaa1-b383-4520-a756-f5d641c3b0da">
+				<Description />
+				<Properties />
+				<Errors />
+				<Section Name="Engine Demo Macro Player.nivsstimprof" TypeGUID="fae2716e-e749-41ef-9f01-4a9046a000ef" Identifier="cae1f560-7ec4-4657-9bc6-e46fca6cf39b">
+					<Description />
+					<Properties>
+						<Property Name="Path">
+							<DependentFile Type="Relative" Path="Stimulus Profiles\Engine Demo Macro Player\Engine Demo Macro Player.nivsstimprof">
+								<Version />
+								<RTDestination />
+								<SupportedTarget />
+								<MD5>322675efbd7a327583fc4ae0e927c3e5</MD5>
+							</DependentFile>
+						</Property>
+					</Properties>
+					<Errors />
+				</Section>
+			</Section>
+			<Section Name="Engine Demo Logging" TypeGUID="c23d9309-697b-4ae0-827b-ceafb29f7389" Identifier="b8796d29-12f9-4d2e-b2ff-f5804a978d0d">
+				<Description />
+				<Properties />
+				<Errors />
+				<Section Name="Engine Demo Logging.nivsseq" TypeGUID="60c70402-70f4-4143-a25d-dccc4748d28d" Identifier="9a0b9022-131b-4bed-9fe4-0eef6dc7d796">
+					<Description />
+					<Properties>
+						<Property Name="Path">
+							<DependentFile Type="Relative" Path="Stimulus Profiles\Engine Demo Logging\Engine Demo Logging.nivsseq">
+								<Version />
+								<RTDestination />
+								<SupportedTarget />
+								<MD5>5a857c9479df8c09f73633fd05abff40</MD5>
+							</DependentFile>
+						</Property>
+					</Properties>
+					<Errors />
+				</Section>
+				<Section Name="Engine Demo Logging.nivsstimprof" TypeGUID="fae2716e-e749-41ef-9f01-4a9046a000ef" Identifier="61205c33-12c9-4108-8979-39d6777989f3">
+					<Description />
+					<Properties>
+						<Property Name="Path">
+							<DependentFile Type="Relative" Path="Stimulus Profiles\Engine Demo Logging\Engine Demo Logging.nivsstimprof">
+								<Version />
+								<RTDestination />
+								<SupportedTarget />
+								<MD5>cc9c92a1ae1ca3eff3f496ca7386714e</MD5>
+							</DependentFile>
+						</Property>
+					</Properties>
+					<Errors />
+				</Section>
+			</Section>
+			<Section Name="Engine Demo CSV File Replay" TypeGUID="c23d9309-697b-4ae0-827b-ceafb29f7389" Identifier="57004c4a-edb8-4db4-9c9d-0a59984bc809">
+				<Description />
+				<Properties />
+				<Errors />
+				<Section Name="Engine Demo CSV File Replay.nivsstimprof" TypeGUID="fae2716e-e749-41ef-9f01-4a9046a000ef" Identifier="ef4d65e4-148c-4a8f-9364-125eae71445c">
+					<Description />
+					<Properties>
+						<Property Name="Path">
+							<DependentFile Type="Relative" Path="Stimulus Profiles\Engine Demo CSV File Replay\Engine Demo CSV File Replay.nivsstimprof">
+								<Version />
+								<RTDestination />
+								<SupportedTarget />
+								<MD5>e823ac5c959eaf0fc4a606b2bee2e46d</MD5>
+							</DependentFile>
+						</Property>
+					</Properties>
+					<Errors />
+				</Section>
+			</Section>
+		</Section>
+		<Section Name="Calibration" TypeGUID="38433223-24A0-4b32-9339-370EC5AA31B4" Identifier="28736f07-ce33-4abd-b1f3-e2694f556fd1">
+			<Description />
+			<Properties />
+			<Errors />
+			<Section Name="Engine Demo.nivscf" TypeGUID="1E715E4F-5EB7-4d75-99E5-F7A3D858E07E" Identifier="31b7fe1d-1439-4e16-b309-89fa18e65db6">
+				<Description />
+				<Properties>
+					<Property Name="Path">
+						<DependentFile Type="Relative" Path="Engine Demo.nivscf">
+							<Version />
+							<RTDestination />
+							<SupportedTarget />
+							<MD5>4f40742ea1b908b96a25e2aea0acedd1</MD5>
+						</DependentFile>
+					</Property>
+				</Properties>
+				<Errors />
+			</Section>
+		</Section>
+		<Section Name="Alarm Responses" TypeGUID="3b1ab560-d77a-41f2-adb4-0c0250b010b3" Identifier="8a580f42-f24f-4941-b0d6-8c5d2b2c149f">
+			<Description />
+			<Properties />
+			<Errors />
+		</Section>
+		<Section Name="Custom Files" TypeGUID="9e2cb626-3583-4345-aeb6-b9fead6ec565" Identifier="90c8fc0d-0a3b-4c01-a5fc-d6cc4f3bfe94">
+			<Description />
+			<Properties />
+			<Errors />
+		</Section>
+		<Section Name="Dependencies" TypeGUID="e5b093fa-a709-4df2-807e-a403422ba675" Identifier="94975677-9fd8-460e-9bba-bc3c7a36958c">
+			<Description />
+			<Properties />
+			<Errors />
+			<Section Name="Engine Demo.nivssdf (1)" TypeGUID="369b9797-43bd-4cdf-8352-81032feed666" Identifier="2a73c380-88ae-4d59-91a0-7cc30c2a96a4">
+				<Description />
+				<Properties>
+					<Property Name="Path">
+						<String>C:\repositories\ATE\veristand\Engine Demo\Engine Demo.nivssdf</String>
+					</Property>
+				</Properties>
+				<Errors />
+			</Section>
+			<Section Name="Engine Demo.nivsscreen (1)" TypeGUID="369b9797-43bd-4cdf-8352-81032feed666" Identifier="e558f8f8-0ac4-4c41-8998-f9670066589e">
+				<Description />
+				<Properties>
+					<Property Name="Path">
+						<String>C:\repositories\ATE\veristand\Engine Demo\Engine Demo.nivsscreen</String>
+					</Property>
+				</Properties>
+				<Errors />
+			</Section>
+			<Section Name="Engine Demo.nivsprj (1)" TypeGUID="369b9797-43bd-4cdf-8352-81032feed666" Identifier="24d85639-dd5b-4c6c-8e61-4716c1c50c07">
+				<Description />
+				<Properties>
+					<Property Name="Path">
+						<String>C:\repositories\ATE\veristand\Engine Demo\Engine Demo.nivsprj</String>
+					</Property>
+				</Properties>
+				<Errors />
+			</Section>
+			<Section Name="Engine Demo Basic.nivsseq (1)" TypeGUID="369b9797-43bd-4cdf-8352-81032feed666" Identifier="eaac0ad7-83aa-4b32-aad4-b93c082d4c2c">
+				<Description />
+				<Properties>
+					<Property Name="Path">
+						<String>C:\repositories\ATE\veristand\Engine Demo\Stimulus Profiles\Basic Engine Demo\Engine Demo Basic.nivsseq</String>
+					</Property>
+				</Properties>
+				<Errors />
+			</Section>
+			<Section Name="Engine Demo Basics.nivsstimprof (1)" TypeGUID="369b9797-43bd-4cdf-8352-81032feed666" Identifier="8ecedfff-529f-4e5c-9c66-47205f23e384">
+				<Description />
+				<Properties>
+					<Property Name="Path">
+						<String>C:\repositories\ATE\veristand\Engine Demo\Stimulus Profiles\Basic Engine Demo\Engine Demo Basics.nivsstimprof</String>
+					</Property>
+				</Properties>
+				<Errors />
+			</Section>
+			<Section Name="Engine Demo Advanced.nivsseq (1)" TypeGUID="369b9797-43bd-4cdf-8352-81032feed666" Identifier="b734564b-aeb1-465d-a864-3b43465752dc">
+				<Description />
+				<Properties>
+					<Property Name="Path">
+						<String>C:\repositories\ATE\veristand\Engine Demo\Stimulus Profiles\Engine Demo Advanced\Engine Demo Advanced.nivsseq</String>
+					</Property>
+				</Properties>
+				<Errors />
+			</Section>
+			<Section Name="Engine Demo Advanced.nivsstimprof (1)" TypeGUID="369b9797-43bd-4cdf-8352-81032feed666" Identifier="e9348abc-00da-4a2e-8b17-8feeb650d6e4">
+				<Description />
+				<Properties>
+					<Property Name="Path">
+						<String>C:\repositories\ATE\veristand\Engine Demo\Stimulus Profiles\Engine Demo Advanced\Engine Demo Advanced.nivsstimprof</String>
+					</Property>
+				</Properties>
+				<Errors />
+			</Section>
+			<Section Name="Engine Demo Return Value.nivsseq (1)" TypeGUID="369b9797-43bd-4cdf-8352-81032feed666" Identifier="8700d083-8596-4c67-a6d9-588d04e6d40f">
+				<Description />
+				<Properties>
+					<Property Name="Path">
+						<String>C:\repositories\ATE\veristand\Engine Demo\Stimulus Profiles\Engine Demo Return Value\Engine Demo Return Value.nivsseq</String>
+					</Property>
+				</Properties>
+				<Errors />
+			</Section>
+			<Section Name="Engine Demo Return Value.nivsstimprof (1)" TypeGUID="369b9797-43bd-4cdf-8352-81032feed666" Identifier="dda8ce62-a5b3-40f7-af21-c55712adc238">
+				<Description />
+				<Properties>
+					<Property Name="Path">
+						<String>C:\repositories\ATE\veristand\Engine Demo\Stimulus Profiles\Engine Demo Return Value\Engine Demo Return Value.nivsstimprof</String>
+					</Property>
+				</Properties>
+				<Errors />
+			</Section>
+			<Section Name="Engine Demo Update Model Parameters.nivsstimprof (1)" TypeGUID="369b9797-43bd-4cdf-8352-81032feed666" Identifier="d4f76e57-7fa0-4d25-9dba-28f58229768e">
+				<Description />
+				<Properties>
+					<Property Name="Path">
+						<String>C:\repositories\ATE\veristand\Engine Demo\Stimulus Profiles\Update Model Parameters\Engine Demo Update Model Parameters.nivsstimprof</String>
+					</Property>
+				</Properties>
+				<Errors />
+			</Section>
+			<Section Name="Engine Demo Macro Player.nivsstimprof (1)" TypeGUID="369b9797-43bd-4cdf-8352-81032feed666" Identifier="230e7273-68f8-4903-9fca-ebe61fcb215d">
+				<Description />
+				<Properties>
+					<Property Name="Path">
+						<String>C:\repositories\ATE\veristand\Engine Demo\Stimulus Profiles\Engine Demo Macro Player\Engine Demo Macro Player.nivsstimprof</String>
+					</Property>
+				</Properties>
+				<Errors />
+			</Section>
+			<Section Name="Engine Demo Logging.nivsseq (1)" TypeGUID="369b9797-43bd-4cdf-8352-81032feed666" Identifier="32dcad23-3e06-455e-a325-1a4b210e8c38">
+				<Description />
+				<Properties>
+					<Property Name="Path">
+						<String>C:\repositories\ATE\veristand\Engine Demo\Stimulus Profiles\Engine Demo Logging\Engine Demo Logging.nivsseq</String>
+					</Property>
+				</Properties>
+				<Errors />
+			</Section>
+			<Section Name="Engine Demo Logging.nivsstimprof (1)" TypeGUID="369b9797-43bd-4cdf-8352-81032feed666" Identifier="4c09a85b-f50a-46a7-9f79-cadaad2824fe">
+				<Description />
+				<Properties>
+					<Property Name="Path">
+						<String>C:\repositories\ATE\veristand\Engine Demo\Stimulus Profiles\Engine Demo Logging\Engine Demo Logging.nivsstimprof</String>
+					</Property>
+				</Properties>
+				<Errors />
+			</Section>
+			<Section Name="Engine Demo CSV File Replay.nivsstimprof (1)" TypeGUID="369b9797-43bd-4cdf-8352-81032feed666" Identifier="db31bb3e-e9b0-4a9b-91af-968e0fdd3763">
+				<Description />
+				<Properties>
+					<Property Name="Path">
+						<String>C:\repositories\ATE\veristand\Engine Demo\Stimulus Profiles\Engine Demo CSV File Replay\Engine Demo CSV File Replay.nivsstimprof</String>
+					</Property>
+				</Properties>
+				<Errors />
+			</Section>
+			<Section Name="Engine Demo.nivscf (1)" TypeGUID="369b9797-43bd-4cdf-8352-81032feed666" Identifier="1cf2286b-75b7-43a3-9ed1-e7c42fedd028">
+				<Description />
+				<Properties>
+					<Property Name="Path">
+						<String>C:\repositories\ATE\veristand\Engine Demo\Engine Demo.nivscf</String>
+					</Property>
+				</Properties>
+				<Errors />
+			</Section>
+			<Section Name="EngineDemo_windows.vsmodel (1)" TypeGUID="369b9797-43bd-4cdf-8352-81032feed666" Identifier="9f82b83c-bebf-413d-9dfe-4feccb8d6027">
+				<Description />
+				<Properties>
+					<Property Name="Path">
+						<String>C:\repositories\ATE\veristand\Engine Demo\Model\EngineDemo_windows.vsmodel</String>
+					</Property>
+				</Properties>
+				<Errors />
+			</Section>
+		</Section>
+	</Root>
+</Document>

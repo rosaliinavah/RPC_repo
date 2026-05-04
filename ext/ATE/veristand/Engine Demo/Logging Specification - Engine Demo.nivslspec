@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="ED79417164BC4F31BF30469EC5A02B2E45B05A689FEE443958875F73A4068E25AAA928C3B2B9F4B3B203980BEF541A0756BFFDB43730BA09F8631B673A5796EE" Timestamp="1D6B6BA17435BC9" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="8.4.0.49331" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="8.4.0.49331" FeatureSetName="VeriStand Core Components" Name="http://www.ni.com/VeriStand" OldestCompatibleVersion="8.2.0.49152" Version="8.2.0.49152" />
+		<ApplicationVersionInfo Build="8.4.0.2339" Name="VeriStand" Version="8.4.0.49331" />
+	</SourceModelFeatureSet>
+	<LoggingSpecification xmlns="http://www.ni.com/VeriStand">
+		<LoggingConfigurationModel BaseLogFilePath="[string]Logs\" CustomRate="[double]10" Id="1" Left="[float]0" LogFileDescription="[string]" LogFileName="[string]{Specification Name}\{Year}\{Month}\{Day}\Log File_{Year}_{Month}_{Day}_{Hour}_{Minute}_{Second}.tdms" LogFileType="[LoggingConfigurationFileType]TDMS" LogTimeChannelType="[TimeChannelOptions]AbsoluteTime" PreTriggerDuration="[double]1" SegmentSize="[ulong]10000000" StartTriggerFormula="[string]rpm &gt; 5000" StartTriggerType="[StartTriggerTypes]StartOnCondition" StopDuration="[double]20" StopLoggingOnDataLoss="[bool]True" StopTriggerType="[StopTriggerTypes]StopAfterDuration" Top="[float]0" UseTargetRate="[bool]False">
+			<LogChannelModel ChannelName="[string]ActualRPM" ChannelPath="[string]Aliases/ActualRPM" Group="[string]Data" Id="2" />
+			<LogChannelModel ChannelName="[string]DesiredRPM" ChannelPath="[string]Aliases/DesiredRPM" Group="[string]Data" Id="3" />
+			<LogChannelModel ChannelName="[string]EnginePower" ChannelPath="[string]Aliases/EnginePower" Group="[string]Data" Id="4" />
+			<LogChannelModel ChannelName="[string]EngineTemp" ChannelPath="[string]Aliases/EngineTemp" Group="[string]Data" Id="5" />
+			<LogChannelModel ChannelName="[string]Actual Loop Rate" ChannelPath="[string]Targets/Controller/System Channels/Actual Loop Rate" Group="[string]Diagnostics" Id="6" />
+			<LogChannelModel ChannelName="[string]Delta T" ChannelPath="[string]Targets/Controller/System Channels/Delta T" Group="[string]Diagnostics" Id="7" />
+			<LogChannelModel ChannelName="[string]HP Loop Duration" ChannelPath="[string]Targets/Controller/System Channels/HP Loop Duration" Group="[string]Diagnostics" Id="8" />
+			<LogChannelModel ChannelName="[string]HP-LP Overwrite" ChannelPath="[string]Targets/Controller/System Channels/HP-LP Overwrite" Group="[string]Diagnostics" Id="9" />
+			<LogChannelModel ChannelName="[string]LP Count" ChannelPath="[string]Targets/Controller/System Channels/LP Count" Group="[string]Diagnostics" Id="10" />
+			<LogChannelModel ChannelName="[string]LP Data Count" ChannelPath="[string]Targets/Controller/System Channels/LP Data Count" Group="[string]Diagnostics" Id="11" />
+			<LogChannelModel ChannelName="[string]LP Loop Duration" ChannelPath="[string]Targets/Controller/System Channels/LP Loop Duration" Group="[string]Diagnostics" Id="12" />
+			<LogChannelModel ChannelName="[string]Model Count" ChannelPath="[string]Targets/Controller/System Channels/Model Count" Group="[string]Diagnostics" Id="13" />
+			<LogChannelModel ChannelName="[string]System Time - Microseconds" ChannelPath="[string]Targets/Controller/System Channels/System Time - Microseconds" Group="[string]Diagnostics" Id="14" />
+			<WrappedTdmsProperty DataType="[TdmsPropertyDataType]String" DefaultPropertyValue="[string]n/a" Description="[string]Your user name" Id="22" PropertyName="[string]User" Value="[string]n/a" />
+			<WrappedTdmsProperty DataType="[TdmsPropertyDataType]String" DefaultPropertyValue="[string]n/a" Description="[string]The unit under test indentifier" Id="23" PropertyName="[string]UUT" Value="[string]n/a" />
+			<WrappedTdmsProperty DataType="[TdmsPropertyDataType]String" DefaultPropertyValue="[string]0" Description="[string]" Id="25" PropertyName="[string]Stop Condition" Value="[string]0" />
+			<WrappedTdmsProperty DefaultPropertyValue="[string]n/a" Id="29" PropertyName="[string]Start Condition" Value="[string]n/a" />
+			<VariableMappingModel Id="32" MappingTypeName="[VariableMappingType]StartTriggerMapping" VariableName="[string]rpm" VariablePath="[string]Aliases/ActualRPM" />
+		</LoggingConfigurationModel>
+	</LoggingSpecification>
+</SourceFile>

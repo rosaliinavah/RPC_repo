@@ -1,0 +1,33 @@
+parameters:
+- name: root_path
+  default: ''
+- name: file_prefix
+  default: 'output.xml'
+- name: report_name
+  default: ''
+
+
+steps:
+  - task: PowerShell@2
+    displayName: Create Robot report
+    continueOnError: true
+    inputs:
+      targetType: inline
+      script: |
+        Write-Output "Creating robot report using robot.rebot."
+        # Define the root directory to search in
+        $rootDirectory = "${{ parameters.root_path }}"
+
+        # Create an empty list to store the file paths
+        $xmlFilePaths = New-Object System.Collections.Generic.List[System.String]
+
+        # Search for XML files in the specified directory and its subdirectories, sorted by creation date
+        Get-ChildItem -Path $rootDirectory -Filter ${{ parameters.file_prefix }} -Recurse |
+            Sort-Object CreationTime |
+            ForEach-Object {
+                # Add the full path of each XML file to the array
+                $xmlFilePaths += $_.FullName
+            }
+
+        Write-Host  "Output.xml files found:" $xmlFilePaths
+        python -m robot.rebot --outputdir $rootDirectory --xunit xunit.xml --name "${{ parameters.report_name }}" $xmlFilePaths

@@ -1,0 +1,19 @@
+﻿<GatewaySet>
+  <Name>CodesysRPC</Name>
+  <Gateways>
+    <Gateway>
+      <Name>NETWORK1</Name>
+      <BitRate>250</BitRate>
+      <Port>1217</Port>
+      <TargerNodeId>1</TargerNodeId>
+      <GatewayNodeId>21</GatewayNodeId>
+    </Gateway>
+    <Gateway>
+      <Name>NETWORK2</Name>
+      <BitRate>250</BitRate>
+      <Port>1218</Port>
+      <TargerNodeId>5</TargerNodeId>
+      <GatewayNodeId>21</GatewayNodeId>
+    </Gateway>
+  </Gateways>
+</GatewaySet>

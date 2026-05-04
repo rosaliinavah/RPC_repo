@@ -1,0 +1,12 @@
+[tool.robocop.lint]
+reports = ["all"]
+configure = [
+    "line-too-long.line_length=200",
+    "too-long-test-case.max_len=250",
+    "too-many-test-cases.max_testcases=150",
+    "too-many-calls-in-test-case.max_calls=30",
+    "too-many-calls-in-keyword.max_calls=50",
+    "too-long-keyword.max_len=600",
+    "too-many-arguments.max_args=10",
+    "file-too-long.max_lines=2500"
+]

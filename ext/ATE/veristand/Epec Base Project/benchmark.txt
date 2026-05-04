@@ -1,0 +1,11 @@
+Config	Rate	Last Fail Reason
+Empty System Definition.nivssdf	500.0 Hz	Success!
+Empty System Definition.nivssdf	1000.0 Hz	Success!
+Empty System Definition.nivssdf	2000.0 Hz	Success!
+Empty System Definition.nivssdf	4000.0 Hz	Success!
+Epec Base Project.nivssdf	500.0 Hz	Success!
+Epec Base Project.nivssdf	1000.0 Hz	Late, Missed_Rate, 
+Epec Base Project.nivssdf	750.0 Hz	Late, 
+Epec Base Project.nivssdf	625.0 Hz	Success!
+Epec Base Project.nivssdf	687.5 Hz	Success!
+Epec Base Project.nivssdf	718.8 Hz	Success!

@@ -1,0 +1,46 @@
+trigger: none
+
+# Variable 'GIT_SSL_NO_VERIFY' was defined in the Variables tab
+variables:
+- name: GIT_SSL_NO_VERIFY
+  value: 1
+
+jobs:
+- job: Job_1
+  displayName: Robot static code check
+  timeoutInMinutes: 10
+  cancelTimeoutInMinutes: 5
+  pool:
+    name: Testing
+    demands:
+    - Agent.Name -equals VV-Build
+
+  steps:
+  - checkout: self
+    clean: true
+
+  - template: templates\create_py_venv.yaml
+
+  - template: templates\install_pip_packages.yaml
+    parameters:
+      venv_folder: $(Build.SourcesDirectory)\venv\
+      project_folder: $(Build.SourcesDirectory)
+
+  - task: PowerShell@2
+    displayName: Run robocop linter
+    inputs:
+      targetType: inline
+      script: |
+        Write-Output "Activate python virtual environment."
+        $(Build.SourcesDirectory)\venv\Scripts\Activate.ps1
+
+        Write-Output "Get changed robot files in this PR (compared to main branch):"
+        $changedFiles = git diff --name-only --diff-filter=AM origin/main '***.robot' '***.resource'
+
+        Write-Output "Changed robot files are:" $changedFiles
+
+        Write-Output "Run robocop on changed files."
+        python $(Build.SourcesDirectory)\run_rflint.py $changedFiles
+
+        Write-Output "Deactivate python virtual environment."
+        deactivate

@@ -1,0 +1,9 @@
+    steps:
+    - task: PowerShell@2
+      displayName: Create Python virtual environment (venv)
+      continueOnError: false
+      inputs:
+        targetType: inline
+        script: |
+          Write-Output "Create python virtual environment."
+          python -m venv venv

@@ -1,0 +1,87 @@
+trigger: none
+
+variables:
+  GIT_SSL_NO_VERIFY: 1
+  PATH_TO_PYTHON_LIBS: '$(Build.SourcesDirectory)\python_libs'
+  PATH_TO_ROBOT: '$(Build.SourcesDirectory)\robot'
+  PATH_TO_RESOURCES: '$(Build.SourcesDirectory)\robot\resources'
+  PATH_TO_TESTS: '$(Build.SourcesDirectory)\robot\smoke'
+  PATH_TO_RESULTS: '$(Build.SourcesDirectory)\results'
+  PLC_DEVICE_NAME: '$(Agent.MachineName)'
+
+jobs:
+- job: Job_1
+  displayName: Smoke testing
+  timeoutInMinutes: 45
+  cancelTimeoutInMinutes: 5
+  workspace:
+    clean: all
+  pool:
+    name: Testing
+    demands:
+    - Agent.Name -equals VV-Build
+
+  steps:
+  - checkout: self
+
+  - template: templates\create_py_venv.yaml
+
+  - template: templates\install_pip_packages.yaml
+    parameters:
+      venv_folder: $(Build.SourcesDirectory)\venv\
+      project_folder: $(Build.SourcesDirectory)
+
+  - template: templates\run_robot.yaml
+    parameters:
+      displayName: "Smoke test"
+      enabled: true
+      venv_path: $(Build.SourcesDirectory)\venv\
+      python_libs_path: $(PATH_TO_PYTHON_LIBS)
+      robot_path: $(PATH_TO_ROBOT)
+      resources_path: $(PATH_TO_RESOURCES)
+      plc_device_name: $(PLC_DEVICE_NAME)
+      firmware_path: "none"
+      application_path: "none"
+      custom_report_name: "Pull Request Smoke tests"
+      output_path: $(PATH_TO_RESULTS)
+      log_level: "TRACE:INFO"
+      include_tags: "smokeANDvirtual"
+      exclude_tags: "broken"
+      test_path: $(PATH_TO_TESTS)
+
+  - task: CopyFiles@2
+    condition: always()
+    displayName: 'Copy robot output files to: $(Build.ArtifactStagingDirectory)'
+    continueOnError: false
+    inputs:
+      SourceFolder: $(PATH_TO_RESULTS)
+      Contents: '**'
+      TargetFolder: $(Build.ArtifactStagingDirectory)\results
+      CleanTargetFolder: true
+      OverWrite: true
+
+  - task: PublishBuildArtifacts@1
+    condition: always()
+    displayName: 'Publish Artifact: Robot-report'
+    continueOnError: false
+    inputs:
+      pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      ArtifactName: Robot-report
+
+  - task: PublishHtmlReport@1
+    condition: always()
+    displayName: 'Publish Html'
+    continueOnError: true
+    inputs:
+      reportDir: '$(Build.ArtifactStagingDirectory)\results\log.html'
+
+  - task: PublishTestResults@2
+    displayName: 'Publish test results'
+    continueOnError: false
+    inputs:
+      testResultsFormat: 'JUnit'
+      testResultsFiles: xunit.xml
+      searchFolder: $(PATH_TO_RESULTS)
+      mergeTestResults: true
+      publishRunAttachments: true
+      failTaskOnMissingResultsFile: true

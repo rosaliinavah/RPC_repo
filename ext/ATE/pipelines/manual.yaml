@@ -1,0 +1,130 @@
+parameters:
+
+- name: testsuite
+  displayName: Test Suite name e.g. smoke* (suites starting with 'smoke').
+  type: string
+  default: "*"
+
+- name: testcase
+  displayName: Test case e.g. Smoke* (tests starting with 'Smoke').
+  type: string
+  default: "*"
+
+- name: include_tags
+  displayName: Include tags e.g. fooANDbar (AND or &, OR, NOT).
+  type: string
+  default: "smoke"
+
+- name: exclude_tags
+  displayName: Exclude tags e.g. fooNOTbar (AND or &, OR, NOT).
+  type: string
+  default: "broken"
+
+- name: log_level
+  displayName: Log level (other than info enables loglevel selection in report).
+  type: string
+  default: TRACE:INFO
+  values:
+  - INFO:INFO
+  - DEBUG:INFO
+  - TRACE:INFO
+
+trigger: none
+
+variables:
+  GIT_SSL_NO_VERIFY: 1
+  NODE_TLS_REJECT_UNAUTHORIZED: 0
+  PATH_TO_AGENT_FOLDER: $(Agent.BuildDirectory)
+  PATH_TO_PYTHON_LIBS: '$(Build.SourcesDirectory)\python_libs'
+  PATH_TO_ROBOT: '$(Build.SourcesDirectory)\robot'
+  PATH_TO_RESOURCES: '$(Build.SourcesDirectory)\robot\resources'
+  PATH_TO_TESTS: '$(Build.SourcesDirectory)\robot'
+  PATH_TO_RESULTS: '$(Build.SourcesDirectory)\results'
+  PLC_DEVICE_NAME: '$(Agent.Name)'
+  PATH_TO_FIRMWARE_FOLDER: '$(Pipeline.Workspace)\firmware_artifact'
+  PATH_TO_APPLICATION_FOLDER: '$(Pipeline.Workspace)\application_artifact'
+
+stages:
+- stage: test_and_publish_stage
+  displayName: Test and Publish
+  pool:
+      name: Testing
+      demands:
+      - Agent.Name -equals VV-ATE
+
+  jobs:
+  - job: Job_1
+    displayName: Test and Publish
+    timeoutInMinutes: 45
+    cancelTimeoutInMinutes: 5
+    workspace:
+      clean: all
+
+    steps:
+    - checkout: self
+
+    - template: templates\create_py_venv.yaml
+
+    - template: templates\install_pip_packages.yaml
+      parameters:
+        venv_folder: $(Build.SourcesDirectory)\venv\
+        project_folder: $(Build.SourcesDirectory)
+
+    - template: templates\run_robot.yaml
+      parameters:
+        displayName: "Tests"
+        enabled: true
+        venv_path: $(Build.SourcesDirectory)\venv\
+        python_libs_path: $(PATH_TO_PYTHON_LIBS)
+        robot_path: $(PATH_TO_ROBOT)
+        resources_path: $(PATH_TO_RESOURCES)
+        plc_device_name: $(PLC_DEVICE_NAME)
+        firmware_path: $(PATH_TO_FIRMWARE_FOLDER)
+        application_path: $(PATH_TO_APPLICATION_FOLDER)
+        custom_report_name: "Tests"
+        output_path: $(PATH_TO_RESULTS)\manual_test
+        log_level: ${{parameters.log_level}}
+        include_tags: ${{parameters.include_tags}}
+        exclude_tags: ${{parameters.exclude_tags}}
+        testsuite: "${{parameters.testsuite}}"
+        testcase: "${{parameters.testcase}}"
+        test_path: $(PATH_TO_TESTS)
+
+    - task: CopyFiles@2
+      condition: always()
+      inputs:
+        SourceFolder: '$(Agent.TempDirectory)'
+        Contents: '**/*.ps1'
+        TargetFolder: '$(PATH_TO_RESULTS)\ps1'
+      displayName: 'Copy Powershell files from Agent.TempDirectory'
+
+    - template: templates\rebot_reports.yaml
+      parameters:
+        root_path: $(PATH_TO_RESULTS)
+        file_prefix: output.xml
+        report_name: "Release Test"
+
+    - task: PublishHtmlReport@1
+      condition: always()
+      displayName: 'Publish Html'
+      continueOnError: true
+      inputs:
+        reportDir: '$(PATH_TO_RESULTS)\log.html'
+
+    - task: PublishBuildArtifacts@1
+      condition: always()
+      displayName: 'Publish Artifact: Robot-report'
+      continueOnError: true
+      inputs:
+        pathtoPublish: '$(PATH_TO_RESULTS)'
+        ArtifactName: Robot-report
+
+    - task: PublishTestResults@2
+      displayName: 'Publish test results'
+      inputs:
+        testResultsFormat: 'JUnit'
+        testResultsFiles: xunit.xml
+        searchFolder: $(PATH_TO_RESULTS)
+        mergeTestResults: true
+        publishRunAttachments: true
+        failTaskOnMissingResultsFile: true

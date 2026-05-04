@@ -1,0 +1,22 @@
+parameters:
+- name: venv_folder
+  default: ''
+- name: project_folder
+  default: ''
+
+steps:
+    - task: PowerShell@2
+      displayName: Install pip packages
+      continueOnError: false
+      inputs:
+        targetType: inline
+        script: |
+          Write-Output "Activate python virtual environment."
+          ${{ parameters.venv_folder }}\Scripts\Activate.ps1
+
+          $test = ""
+          $test = pip freeze
+          Write-Output "What packages we have:" + $test
+
+          Write-Output "Install Python dependencies."
+          pip install -r ${{ parameters.project_folder }}\requirements.txt

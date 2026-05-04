@@ -1,0 +1,33 @@
+{
+    "robotcode.run.openOutputAfterRun": "log",
+    "robotcode.robot.pythonPath": [
+        "./python_libs",
+        "./robot",
+        "./robot/resources"
+    ],
+
+    "robotcode.robot.outputDir": "results",
+    "files.trimTrailingWhitespace": true,
+    "terminal.integrated.env.windows": { "PYTHONPATH": "${workspaceFolder}"},
+    "files.exclude": {
+        "**/__pycache__": true
+    },
+    "editor.detectIndentation": true,
+    "editor.rulers": [150],
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#ff4081"
+    },
+    "robotcode.robocop.enabled": true,
+    "robotcode.debug.attachPython": true,
+    "robotcode.robot.args": ["-L", "TRACE:TRACE"],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8",
+        "editor.formatOnSave": true
+      },
+    "pylint.args": [
+        "--disable=F0401",
+        "--rcfile=.pylintrc"
+    ],
+    "python-envs.pythonProjects": [],
+    "python-envs.defaultEnvManager": "ms-python.python:system"
+}

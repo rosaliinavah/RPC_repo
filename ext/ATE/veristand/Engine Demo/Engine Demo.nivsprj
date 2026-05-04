@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="475B508C6ED66650E2C1A94F226E0396355FC96E47C8DAAB35E25BE84AC10FE40E21B1EE284A39B44947D5B227C4F23D1091684AFA5EFBD9B5546B35F90F0907" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="9.9.0.49782" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.9.0.49782" FeatureSetName="VeriStand Core Components" Name="http://www.ni.com/VeriStand" OldestCompatibleVersion="9.0.0.49152" Version="9.0.0.49152" />
+		<ApplicationVersionInfo Build="10.5.0.49782" Name="VeriStand" Version="9.9.0.49782" />
+	</SourceModelFeatureSet>
+	<Project xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="1" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<EmbeddedDefinitionReference Id="2" ModelDefinitionType="NationalInstruments.ProjectExplorer.Modeling.ProjectDataManager" Name="ProjectExplorer">
+			<ProjectExplorer />
+		</EmbeddedDefinitionReference>
+		<NameScopingEnvoy Id="4" ModelDefinitionType="DefaultTarget" Name="DefaultTarget">
+			<DefaultTarget />
+			<EmbeddedDefinitionReference Id="5" ModelDefinitionType="GatewayDefinition" Name="Gateway" Reparentable="False">
+				<GatewayDefinition xmlns="http://www.ni.com/VeriStand" />
+			</EmbeddedDefinitionReference>
+			<SourceFileReference Id="14" ModelDefinitionType="{http://www.ni.com/VeriStand}LoggingSpecification" Name="Logging Specification - Engine Demo.nivslspec" StoragePath="Logging Specification - Engine Demo.nivslspec" />
+			<SourceFileReference Id="16" ModelDefinitionType="{http://www.ni.com/VeriStand}Screen" Name="Engine Demo Screen.nivsscr" StoragePath="Engine Demo Screen.nivsscr" />
+			<FileReference Bindings=".nivscf" Id="5077585dd6654c72b43969eae6bd547e" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="Engine Demo.nivscf" StoragePath="Engine Demo.nivscf" />
+			<FileReference Bindings=".nivsscreen" Id="49a8b8affa6748eca5f819cfe461357d" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="Engine Demo.nivsscreen" StoragePath="Engine Demo.nivsscreen" />
+			<FileReference Bindings=".nivsproj" Id="ef7b8e472a6b456d8a32d7e5377e3317" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="Engine Demo.nivsproj" StoragePath="Engine Demo.nivsproj" />
+			<SourceFileReference Bindings="EnvoyManager" Id="f3b22c44127f4f1ba21131668152c533" ModelDefinitionType="{http://www.ni.com/VeriStand}SystemDefinition" Name="Engine Demo.nivssdf" StoragePath="Engine Demo.nivssdf" />
+			<EmbeddedDefinitionReference Id="4c24f55170c14cb19fe28771f651fc3e" ModelDefinitionType="SdfFilePath" Name="SdfPath" Reparentable="False">
+				<SdfFilePath SdfPath="Engine Demo.nivssdf" xmlns="http://www.ni.com/VeriStand" />
+			</EmbeddedDefinitionReference>
+			<FileReference Bindings=".nivsseq" Id="bd57b952fcee449585728c62649c155d" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="Engine Demo Basic.nivsseq" StoragePath="Stimulus Profiles\Basic Engine Demo\Engine Demo Basic.nivsseq" />
+			<FileReference Bindings=".nivsstimprof" Id="e4cc399784744fda91ace86888893e7" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="Engine Demo Basics.nivsstimprof" StoragePath="Stimulus Profiles\Basic Engine Demo\Engine Demo Basics.nivsstimprof" />
+			<FileReference Bindings=".nivsseq" Id="49004234f9df477b93772b1006904124" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="Engine Demo Advanced.nivsseq" StoragePath="Stimulus Profiles\Engine Demo Advanced\Engine Demo Advanced.nivsseq" />
+			<FileReference Bindings=".nivsstimprof" Id="1c8f972ed07749589390e914cb6c65d9" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="Engine Demo Advanced.nivsstimprof" StoragePath="Stimulus Profiles\Engine Demo Advanced\Engine Demo Advanced.nivsstimprof" />
+			<FileReference Bindings=".nivsseq" Id="9fced5c0e5814f3eab9ecac7895a219c" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="Measure Set Point Response.nivsseq" StoragePath="Stimulus Profiles\Engine Demo Channel References\Measure Set Point Response.nivsseq" />
+			<FileReference Bindings=".nivsseq" Id="e4d6a4a3e7e3472d86714eac3c678119" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="Set Engine Power.nivsseq" StoragePath="Stimulus Profiles\Engine Demo Channel References\Set Engine Power.nivsseq" />
+			<FileReference Bindings=".nivsstimprof" Id="fd38076bc0fc4fbdaf7513a93ff2aa05" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="Test Engine Set Points.nivsstimprof" StoragePath="Stimulus Profiles\Engine Demo Channel References\Test Engine Set Points.nivsstimprof" />
+			<FileReference Bindings=".nivsstimprof" Id="e4976c4e1751486f983e8a55465b0966" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="Engine Demo CSV File Replay.nivsstimprof" StoragePath="Stimulus Profiles\Engine Demo CSV File Replay\Engine Demo CSV File Replay.nivsstimprof" />
+			<FileReference Bindings=".csv" Id="50b3b630b3f34c2ca3ad51d91301a7e1" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="WarmUp Phase 1.csv" StoragePath="Stimulus Profiles\Engine Demo CSV File Replay\WarmUp Phase 1.csv" />
+			<FileReference Bindings=".csv" Id="a4051df5d20a4b30a9de42c9b9a16483" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="WarmUp Phase 2.csv" StoragePath="Stimulus Profiles\Engine Demo CSV File Replay\WarmUp Phase 2.csv" />
+			<FileReference Bindings=".nivsseq" Id="dd440077e00947d7a45fdda814629159" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="Engine Demo Logging.nivsseq" StoragePath="Stimulus Profiles\Engine Demo Logging\Engine Demo Logging.nivsseq" />
+			<FileReference Bindings=".nivsstimprof" Id="bf072d48c0154e0399285ffdbe17b238" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="Engine Demo Logging.nivsstimprof" StoragePath="Stimulus Profiles\Engine Demo Logging\Engine Demo Logging.nivsstimprof" />
+			<FileReference Bindings=".nivsstimprof" Id="955628bf7a9e4c53a0b6c789e5c17c20" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="Engine Demo Macro Player.nivsstimprof" StoragePath="Stimulus Profiles\Engine Demo Macro Player\Engine Demo Macro Player.nivsstimprof" />
+			<FileReference Bindings=".nivsmacro" Id="f71617b74c674c84a7eaa8fc0314ab59" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="Engine Demo Macro.nivsmacro" StoragePath="Stimulus Profiles\Engine Demo Macro Player\Engine Demo Macro.nivsmacro" />
+			<FileReference Bindings=".nivsseq" Id="c63a2b0ed5744ac4b2a09ebe4a718d58" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="Engine Demo Return Value.nivsseq" StoragePath="Stimulus Profiles\Engine Demo Return Value\Engine Demo Return Value.nivsseq" />
+			<FileReference Bindings=".nivsstimprof" Id="6168731f304a4f2898764bde57b0014b" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="Engine Demo Return Value.nivsstimprof" StoragePath="Stimulus Profiles\Engine Demo Return Value\Engine Demo Return Value.nivsstimprof" />
+			<FileReference Bindings=".nivsstimprof" Id="f22a20915c604296bf6d6838e0efa26b" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="Engine Demo Update Model Parameters.nivsstimprof" StoragePath="Stimulus Profiles\Update Model Parameters\Engine Demo Update Model Parameters.nivsstimprof" />
+			<FileReference Bindings=".txt" Id="cc122a6402a54565a3b0d48a70e36ddd" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="OriginalParameterValues.txt" StoragePath="Stimulus Profiles\Update Model Parameters\OriginalParameterValues.txt" />
+			<FileReference Bindings=".txt" Id="d59ea39a03264af4aa53c4e15cc543f8" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="ParameterUpdate1.txt" StoragePath="Stimulus Profiles\Update Model Parameters\ParameterUpdate1.txt" />
+			<FileReference Bindings=".txt" Id="f35b4fd6b8ad4e30a48a733abfcdb55f" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="ParameterUpdate2.txt" StoragePath="Stimulus Profiles\Update Model Parameters\ParameterUpdate2.txt" />
+			<FileReference Bindings=".txt" Id="f6adebb11dc34b3089038ab9cb43b633" ModelDefinitionType="{http://www.ni.com/PlatformFramework}ExternalFile" Name="subfile.txt" StoragePath="Stimulus Profiles\Update Model Parameters\subfile.txt" />
+		</NameScopingEnvoy>
+	</Project>
+	<ProjectInformation xmlns="http://www.ni.com/PlatformFramework" />
+</SourceFile>

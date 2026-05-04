@@ -1,0 +1,72 @@
+parameters:
+- name: displayName
+  default: ''
+- name: enabled
+  default: true
+- name: venv_path
+  default: ''
+- name: python_libs_path
+  default: ''
+- name: robot_path
+  default: ''
+- name: resources_path
+  default: ''
+- name: plc_device_name
+  default: ''
+- name: firmware_path
+  default: ''
+- name: application_path
+  default: ''
+- name: custom_report_name
+  default: ''
+- name: output_path
+  default: ''
+- name: log_level
+  default: 'INFO:INFO'
+- name: include_tags
+  default: ''
+- name: exclude_tags
+  default: 'broken'
+- name: testsuite
+  default: "*"
+- name: testcase
+  default: "*"
+- name: test_path
+  default: ''
+
+steps:
+    - task: PowerShell@2
+      displayName: "${{ parameters.displayName }}"
+      condition: eq(${{ parameters.enabled }}, true)
+      continueOnError: true
+      inputs:
+        targetType: inline
+        script: |
+          Write-Output "Activate python virtual environment."
+          ${{ parameters.venv_path }}\Scripts\Activate.ps1
+
+          $test = ""
+          $test = pip freeze
+          Write-Output "What packages we have:" $test
+
+          $include_tags = "${{ parameters.include_tags }}"
+          $exclude_tags = "${{ parameters.exclude_tags }}"
+
+          python -m robot `
+          --pythonpath ${{ parameters.python_libs_path }} `
+          --pythonpath ${{ parameters.robot_path }} `
+          --pythonpath ${{ parameters.resources_path }} `
+          --variable PLC_DEVICE_NAME:${{ parameters.plc_device_name }} `
+          --variable PATH_TO_FIRMWARE_FOLDER:${{ parameters.firmware_path }} `
+          --variable PATH_TO_APPLICATION_FOLDER:${{ parameters.application_path }} `
+          --name "${{ parameters.custom_report_name }}" `
+          --xunit xunit.xml `
+          --outputdir ${{ parameters.output_path }} `
+          --loglevel ${{parameters.log_level}} `
+          --include $include_tags `
+          --exclude $exclude_tags `
+          --suite "${{parameters.testsuite}}" `
+          --test "${{parameters.testcase}}" ${{parameters.test_path}}
+
+          Write-Output "Deactivate Python virtual environment."
+          deactivate

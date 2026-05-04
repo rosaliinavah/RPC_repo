@@ -1,0 +1,14 @@
+{
+    "recommendations": [
+        "d-biehl.robotcode",
+        "eamodio.gitlens",
+        "redhat.vscode-yaml",
+        "yzhang.markdown-all-in-one",
+        "ms-python.pylint",
+        "ms-vscode.powershell",
+        "streetsidesoftware.code-spell-checker",
+        "mechatroner.rainbow-csv",
+        "ms-python.python",
+        "ms-python.autopep8"
+    ]
+}
